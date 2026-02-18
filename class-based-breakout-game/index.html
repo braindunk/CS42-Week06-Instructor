@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <!-- please feel free to copy the HTML code in this template into any new empty HTML file -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>CS42 Week 6 Instructor Example: Class-Based Example</title>
+    <!-- load Phaser 3.60.0 game engine JavaScript library file via CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser-arcade-physics.min.js"></script>
+  </head>
+  <body>
+    <!-- developers often isolate each class in a separate js file -->
+    <script src="BallObject.js"></script>
+    <script src="PaddleObject.js"></script>
+    <script src="BricksObject.js"></script>
+    <script src="Scene1.js"></script>
+    <script>
+      // code will go here that creates a new Phaser.Game object instance to start gameplay
+      new Phaser.Game(
+        {
+          type: Phaser.WEBGL,
+          width: 800,
+          height: 600,
+          physics: {
+            default: 'arcade',
+            arcade: {
+              debug: true
+            }
+          },
+          scene: [ new Scene1 ]
+        }
+      );
+    </script>
+  </body>
+</html>
